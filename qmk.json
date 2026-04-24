@@ -1,6 +1,9 @@
 {
-    "userspace_version": "1.1",
-    "build_targets": [
-        ["bastardkb/scylla", "my-keymap"]
-    ]
+  "userspace_version": "1.1",
+  "build_targets": [
+    {
+      "keyboard": "bastardkb/scylla",
+      "keymap": "my-keymap"
+    }
+  ]
 }
