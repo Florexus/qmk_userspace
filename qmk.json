@@ -2,8 +2,10 @@
   "userspace_version": "1.1",
   "build_targets": [
     {
-      "keyboard": "bastardkb/scylla",
-      "keymap": "my-keymap"
+      "env": {
+        "KEYBOARD": "bastardkb/scylla",
+        "KEYMAP": "my-keymap"
+      }
     }
   ]
 }
