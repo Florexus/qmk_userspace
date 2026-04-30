@@ -9,16 +9,13 @@
 //   3 — Mouse / Media
 
 // Notes:
-//   - UC(0x00F6) (ö) requires UNICODE_ENABLE = yes in rules.mk and the correct
-//     Unicode input mode set for your OS, e.g. set_unicode_input_mode(UNICODE_MODE_WINCOMPOSE)
-//     in matrix_init_user(), or UNICODE_MODE_LINUX / UNICODE_MODE_MACOS as appropriate.
+//   - ä/ö/ü use UC() and require UNICODE_ENABLE = yes in rules.mk
+//   - Set the Unicode input mode in config.h, e.g.:
+//       #define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX
+//       #define UNICODE_SELECTED_MODES UNICODE_MODE_MACOS
+//       #define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE  // requires WinCompose on Windows
 
-void matrix_init_user(void) {
-    set_unicode_input_mode(UNICODE_MODE_WINCOMPOSE); // Windows
-    // set_unicode_input_mode(UNICODE_MODE_MACOS);   // macOS
-    // set_unicode_input_mode(UNICODE_MODE_LINUX);   // Linux (IBus/GTK)
-}
-
+#include QMK_KEYBOARD_H
 
 // ---------------------------------------------------------------------------
 // Keymap
