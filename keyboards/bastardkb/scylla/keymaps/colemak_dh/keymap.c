@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // -----------------------------------------------------------------------
     // Layer 0 — Base (Colemak-DH)
     // -----------------------------------------------------------------------
-    [0] = LAYOUT(
+    [0] = LAYOUT_split_4x6_5(
         // Left half
         KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,
         KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,
@@ -54,13 +54,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_SCLN, KC_MINS, KC_Y,    KC_U,    KC_L,    KC_J,
         KC_QUOT, KC_O,    KC_I,    KC_E,    KC_N,    KC_M,
         KC_BSLS, KC_SLSH, KC_DOT,  KC_COMM, KC_H,    KC_K,
-        KC_NO,   /*thumbs:*/ TT(2),   KC_RCTL, KC_BSPC, KC_SFTENT, KC_ESC
+        KC_NO,   /*thumbs:*/ TT(2),   KC_RCTL, KC_BSPC, SC_SENT, KC_ESC
     ),
 
     // -----------------------------------------------------------------------
     // Layer 1 — Navigation / Numpad  (hold TT(1) from base)
     // -----------------------------------------------------------------------
-    [1] = LAYOUT(
+    [1] = LAYOUT_split_4x6_5(
         // Left half
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_PPLS, KC_PMNS, KC_7,    KC_8,    KC_9,    KC_PEQL,
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // -----------------------------------------------------------------------
     // Layer 2 — Symbols / Function keys  (hold TT(2) from base)
     // -----------------------------------------------------------------------
-    [2] = LAYOUT(
+    [2] = LAYOUT_split_4x6_5(
         // Left half
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,
         KC_TRNS, KC_TRNS, S(KC_7), S(KC_8), KC_GRV,  KC_LBRC,
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // -----------------------------------------------------------------------
     // Layer 3 — Mouse / Media  (reached via TT(3) from layers 1 or 2)
     // -----------------------------------------------------------------------
-    [3] = LAYOUT(
+    [3] = LAYOUT_split_4x6_5(
         // Left half
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_UP, KC_TRNS, KC_TRNS,
