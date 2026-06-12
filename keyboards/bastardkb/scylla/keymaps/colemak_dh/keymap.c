@@ -17,19 +17,33 @@
 
 #include QMK_KEYBOARD_H
 
+// Modifier for alpha keys to replace them with a mod-tap shift and key press key,
+// to make them sensitive to PERMISSIVE_HOLD and HOLD_ON_OTHER_KEY_PRESS
+// instead of using autoshift.
+#define AS(kc) MT(MOD_LSFT, kc)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // -----------------------------------------------------------------------
     // Layer 0 — Base (Colemak-DH)
     // -----------------------------------------------------------------------
+    // [0] = LAYOUT_split_4x6_5(
+    //     KC_F1,       KC_F2,       KC_F3,       KC_F4,       KC_F5,       KC_F6,               KC_F7,       KC_F8,       KC_F9,       KC_F10,       KC_F11,     KC_F12,
+    //     KC_TAB,      KC_Q,        KC_W,        KC_F,        KC_P,        KC_B,                KC_J,        KC_L,        KC_U,        KC_Y,        KC_MINS,     S(KC_1),
+    //     KC_CAPS,     KC_A,        KC_R,        KC_S,        KC_T,        KC_G,                KC_M,        KC_N,        KC_E,        KC_I,        KC_O,        KC_QUOT,
+    //     KC_LGUI,     KC_Z,        KC_X,        KC_C,        KC_D,        KC_V,                KC_K,        KC_H,        KC_COMM,     KC_DOT,      S(KC_SLSH),  KC_RSFT,
+    //                                            KC_LSFT,     KC_SPC,      MO(1),               MO(2),       SC_SENT,     KC_BSPC,
+    //                                                         KC_LALT,     KC_LCTL,             KC_RCTL,     KC_ESC
+    // ),
     [0] = LAYOUT_split_4x6_5(
         KC_F1,       KC_F2,       KC_F3,       KC_F4,       KC_F5,       KC_F6,               KC_F7,       KC_F8,       KC_F9,       KC_F10,       KC_F11,     KC_F12,
-        KC_TAB,      KC_Q,        KC_W,        KC_F,        KC_P,        KC_B,                KC_J,        KC_L,        KC_U,        KC_Y,        KC_MINS,     S(KC_1),
-        KC_CAPS,     KC_A,        KC_R,        KC_S,        KC_T,        KC_G,                KC_M,        KC_N,        KC_E,        KC_I,        KC_O,        KC_QUOT,
-        KC_LGUI,     KC_Z,        KC_X,        KC_C,        KC_D,        KC_V,                KC_K,        KC_H,        KC_COMM,     KC_DOT,      S(KC_SLSH),  KC_RSFT,
+        KC_TAB,      AS(KC_Q),    AS(KC_W),    AS(KC_F),    AS(KC_P),    AS(KC_B),            AS(KC_J),    AS(KC_L),    AS(KC_U),    AS(KC_Y),     KC_MINS,     S(KC_1),
+        KC_CAPS,     AS(KC_A),    AS(KC_R),    AS(KC_S),    AS(KC_T),    AS(KC_G),            AS(KC_M),    AS(KC_N),    AS(KC_E),    AS(KC_I),     AS(KC_O),    KC_QUOT,
+        KC_LGUI,     AS(KC_Z),    AS(KC_X),    AS(KC_C),    AS(KC_D),    AS(KC_V),            AS(KC_K),    AS(KC_H),    KC_COMM,     KC_DOT,       S(KC_SLSH),  KC_RSFT,
                                                KC_LSFT,     KC_SPC,      MO(1),               MO(2),       SC_SENT,     KC_BSPC,
                                                             KC_LALT,     KC_LCTL,             KC_RCTL,     KC_ESC
     ),
+
 
     // -----------------------------------------------------------------------
     // Layer 1 — Numpad / Vim-oriented Navigation
