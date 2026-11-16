@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CAPS,     KC_A,        KC_R,        KC_S,        KC_T,        KC_G,                KC_M,        KC_N,        KC_E,        KC_I,        KC_O,        KC_QUOT,
         KC_LGUI,     KC_Z,        KC_X,        KC_C,        KC_D,        KC_V,                KC_K,        KC_H,        KC_COMM,     KC_DOT,      S(KC_SLSH),  KC_RSFT,
                                                KC_LSFT,     KC_SPC,      MO(1),               MO(2),       SC_SENT,     KC_BSPC,
-                                                            KC_LALT,     KC_LCTL,             KC_RCTL,     KC_ESC
+                                                MT(MOD_LALT,KC_ESC),     KC_LCTL,             KC_RCTL,     MT(MOD_RALT,KC_ESC)
     ),
 
     // [0] = LAYOUT_split_4x6_5(
@@ -74,10 +74,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Layer 3 — Mouse & Swiss keys
     // -----------------------------------------------------------------------
     [3] = LAYOUT_split_4x6_5(
-        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS, KC_PGUP,    KC_TRNS,    KC_TRNS,    KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS,    KC_MS_UP,   KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS, KC_MS_WH_UP,KC_TRNS,    UC(0x00FC), KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,KC_MS_BTN1,     KC_MS_BTN2,KC_MS_WH_LEFT,KC_MS_WH_DOWN,KC_MS_WH_RIGHT,UC(0x00F6),UC(0x00E4),
-        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS, KC_PGDN,    KC_TRNS,    KC_TRNS,    KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS,       KC_TRNS,    KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS,    KC_MS_UP,   KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS,      KC_MS_WH_UP,  KC_TRNS,       UC(0x00FC), KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_MS_LEFT, KC_MS_BTN1, KC_MS_RIGHT,KC_TRNS,        KC_TRNS, KC_MS_WH_LEFT,KC_MS_BTN2,   KC_MS_WH_RIGHT,UC(0x00F6), UC(0x00E4),
+        KC_TRNS, KC_TRNS, KC_TRNS,    KC_MS_DOWN, KC_TRNS,    KC_TRNS,        KC_TRNS, KC_PGUP,      KC_MS_WH_DOWN,KC_PGDN,       KC_TRNS,    KC_TRNS,
                                       KC_TRNS,    KC_TRNS,    TO(0),          TO(0),   KC_TRNS, KC_TRNS,
                                                   KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS
     ),
