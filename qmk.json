@@ -1,6 +1,6 @@
 {
   "userspace_version": "1.1",
   "build_targets": [
-    ["bastardkb/scylla", "colemak_dh"]
+    ["bastardkb/scylla/splinktegrated_rev1", "colemak_dh"]
   ]
 }
