@@ -75,9 +75,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // -----------------------------------------------------------------------
     [3] = LAYOUT_split_4x6_5(
         KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS,      KC_TRNS,      KC_TRNS,       KC_TRNS,    KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS,    KC_MS_UP,   KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS,      KC_MS_WH_UP,  KC_TRNS,       UC(0x00FC), KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_MS_LEFT, KC_MS_BTN1, KC_MS_RIGHT,KC_TRNS,        KC_TRNS, KC_MS_WH_LEFT,KC_MS_BTN2,   KC_MS_WH_RIGHT,UC(0x00F6), UC(0x00E4),
-        KC_TRNS, KC_TRNS, KC_TRNS,    KC_MS_DOWN, KC_TRNS,    KC_TRNS,        KC_TRNS, KC_PGUP,      KC_MS_WH_DOWN,KC_PGDN,       KC_TRNS,    KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS,    MS_UP,   KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS,      MS_WHLU,  KC_TRNS,       UC(0x00FC), KC_TRNS,
+        KC_TRNS, KC_TRNS, MS_LEFT, MS_BTN1, MS_RGHT,KC_TRNS,        KC_TRNS, MS_WHLL,MS_BTN2,   MS_WHLR,UC(0x00F6), UC(0x00E4),
+        KC_TRNS, KC_TRNS, KC_TRNS,    MS_DOWN, KC_TRNS,    KC_TRNS,        KC_TRNS, KC_PGUP,      MS_WHLD,KC_PGDN,       KC_TRNS,    KC_TRNS,
                                       KC_TRNS,    KC_TRNS,    TO(0),          TO(0),   KC_TRNS, KC_TRNS,
                                                   KC_TRNS,    KC_TRNS,        KC_TRNS, KC_TRNS
     ),
